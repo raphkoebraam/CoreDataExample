@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A388a" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="RSList" representedClassName="RSList" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSTask" inverseName="whichList" inverseEntity="RSTask" syncable="YES"/>
+    </entity>
+    <entity name="RSTask" representedClassName="RSTask" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="whichList" maxCount="1" deletionRule="Nullify" destinationEntity="RSList" inverseName="tasks" inverseEntity="RSList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RSList" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="RSTask" positionX="0" positionY="0" width="128" height="75"/>
+    </elements>
+</model>

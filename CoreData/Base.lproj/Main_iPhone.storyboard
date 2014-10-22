@@ -116,17 +116,17 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="saveButton:" destination="eE6-YZ-j1k" eventType="touchUpInside" id="RVA-3I-d76"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New To-Do List" id="M8g-Kd-LT8"/>
-                    <connections>
-                        <outlet property="listNameTextField" destination="arO-8i-vRI" id="aKS-fq-Y6V"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="New To-Do List" id="M8g-Kd-LT8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="wZ9-dG-iQi">
+                            <connections>
+                                <action selector="cancelButton:" destination="eE6-YZ-j1k" id="qdN-mf-jhZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NO-Tr-6Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +186,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" id="did-qj-7w3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="VVk-D0-NPg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="VVk-D0-NPg">
+                            <connections>
+                                <action selector="cancelButton:" destination="dSd-su-L17" id="ic8-TL-S0n"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="taskNameTextField" destination="eMa-9q-niW" id="q1K-9n-Zng"/>

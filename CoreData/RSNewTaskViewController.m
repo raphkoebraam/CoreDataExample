@@ -32,7 +32,10 @@
 }
 
 
-- (IBAction)saveButton:(id)sender {
+#pragma mark - IBActions
+
+- (IBAction)saveButton:(id)sender
+{
     if (![self.taskNameTextField.text isEqualToString:@""]) {        
         [RSTask createTaskWithTitle:self.taskNameTextField.text
                              inList:self.currentList
@@ -42,6 +45,12 @@
     } else {
         [self alert:@"Insert a name for the task."];
     }
+}
+
+
+- (IBAction)cancelButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

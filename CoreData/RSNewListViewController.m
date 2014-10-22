@@ -31,14 +31,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
 
-- (IBAction)saveButton:(id)sender {
+- (IBAction)saveButton:(id)sender
+{
     if (![self.listNameTextField.text isEqualToString:@""]) {
         [RSList createListWithTitle:self.listNameTextField.text inManagedObjectContext:[[RSDataModelManager sharedDataModel] mainContext]];
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         [self alert:@"Insert a name for the to-do list."];
     }
+}
+
+
+- (IBAction)cancelButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
